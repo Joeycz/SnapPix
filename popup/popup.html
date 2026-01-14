@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SnapPix</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <h1>SnapPix</h1>
+
+    <div class="tabs">
+      <button class="tab active" data-tab="mouse">鼠标选择</button>
+      <button class="tab" data-tab="selector">选择器</button>
+    </div>
+
+    <div class="tab-content active" id="tab-mouse">
+      <p class="description">点击按钮后在页面上选择元素</p>
+      <button id="startSelect" class="btn primary">
+        <span class="btn-icon">🎯</span>
+        开始选择节点
+      </button>
+    </div>
+
+    <div class="tab-content" id="tab-selector">
+      <p class="description">输入 CSS 选择器定位元素</p>
+      <input type="text" id="selectorInput" class="selector-input" placeholder="例如: #header, .card, div.content">
+      <button id="selectBySelector" class="btn primary">
+        <span class="btn-icon">🔍</span>
+        查找并截图
+      </button>
+    </div>
+
+    <div class="options">
+      <div class="option-group">
+        <label>图片格式</label>
+        <div class="radio-group">
+          <label class="radio-label">
+            <input type="radio" name="format" value="png" checked>
+            <span>PNG</span>
+          </label>
+          <label class="radio-label">
+            <input type="radio" name="format" value="jpeg">
+            <span>JPEG</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="option-group">
+        <label>图片质量 <span id="qualityValue">100%</span></label>
+        <input type="range" id="quality" min="10" max="100" value="100" step="10">
+      </div>
+    </div>
+
+    <div class="shortcut-hint">
+      提示: 选择时按 <kbd>ESC</kbd> 取消
+    </div>
+
+    <div id="status" class="status"></div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
