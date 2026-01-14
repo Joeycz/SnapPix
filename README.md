@@ -76,7 +76,7 @@
 ## 技术栈
 
 - Chrome Extension Manifest V3
-- **[snapdom](https://github.com/nicholasxjy/snapdom)** - 高性能 DOM 截图引擎
+- **[snapdom](https://github.com/zumerlab/snapdom)** - 高性能 DOM 截图引擎
 - Vanilla JavaScript
 
 ### 为什么选择 snapdom？
